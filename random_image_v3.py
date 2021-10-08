@@ -59,7 +59,7 @@ def main():
 #    imageB1.show()
 #    imageR1.show()
     epd.display(epd.getbuffer(imageB1), epd.getbuffer(imageR1))
-#    time.sleep(3600)  # change the image every minute
+#    time.sleep(3600)  # change the image every hour
     exit()
     main()
 
