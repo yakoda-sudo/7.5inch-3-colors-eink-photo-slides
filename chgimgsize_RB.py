@@ -1,4 +1,4 @@
-#test checking the image size resolution/colors
+#batch convert of image size resolution/colors 
 from PIL import Image
 from PIL import *
 #import time
@@ -7,7 +7,7 @@ import numpy
 #define image size
 width = 800
 height = 480
-#define palette array
+#define palette array 3 colors ,black/white/red
 palettedata = [
         0, 0, 0,
         255, 255, 255,
@@ -16,8 +16,8 @@ palettedata = [
 p_img = Image.new('P', (16, 16))
 p_img.putpalette(palettedata * 32)
 #walk all files under folder
-path1 = 'E:/py-script/testpicture/jpg/'
-path2 = 'E:/py-script/testpicture/bmp/'
+path1 = 'D:/your_local_source_file_directory1'
+path2 = 'D:/Your_local_target_file_directory'
 filelist = os.listdir(path1)
 
 for item in filelist:
