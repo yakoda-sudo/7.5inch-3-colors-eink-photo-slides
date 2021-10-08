@@ -18,17 +18,17 @@ EPD_HEIGHT = 480
 #    loading_image=random.randint(0,len(images)-1)
 #   return path+images[loading_image]
 # define the picture directory
-picdir = '/home/pi/E-Paper-PhotoSlideShow/bmp/'
+picdir = '/home/pi/your_directory/bmp/'
 
-2adef main():
+def main():
     epd = epd7in5b_V2.EPD()
     epd.init()
-    # For simplicity, the arguments are explicit numerical coordinates
 #    imageB1 = Image.new('1', (EPD_WIDTH, EPD_HEIGHT), 255)    # 1: clear the frame
 #    ImageDraw.Draw(imageB)
 #    imageR1 = Image.new('1', (EPD_WIDTH, EPD_HEIGHT), 255)
 #    ImageDraw.Draw(imageR)
 #    localimg = choose_random_loading_image('bmp/')
+#  imageB will be save for black image imagR for red image
     localimg = random.choice(os.listdir('bmp/'))
     imageB1 = Image.open(picdir+localimg).convert('RGB')
     imageR1 = Image.open(picdir+localimg).convert('RGB')
