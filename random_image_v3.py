@@ -23,9 +23,9 @@ picdir = '/home/pi/your_directory/bmp/'
 def main():
     epd = epd7in5b_V2.EPD()
     epd.init()
-#    imageB1 = Image.new('1', (EPD_WIDTH, EPD_HEIGHT), 255)    # 1: clear the frame
+    imageB1 = Image.new('1', (EPD_WIDTH, EPD_HEIGHT), 255)    # 1: clear the frame
 #    ImageDraw.Draw(imageB)
-#    imageR1 = Image.new('1', (EPD_WIDTH, EPD_HEIGHT), 255)
+    imageR1 = Image.new('1', (EPD_WIDTH, EPD_HEIGHT), 255)
 #    ImageDraw.Draw(imageR)
 #    localimg = choose_random_loading_image('bmp/')
 #  imageB will be save for black image imagR for red image
