@@ -1,5 +1,5 @@
 ##
-##display for 7.5 inch R/B/W 3 color eink to display better quality, need to use my script to convert picture to 3 colors 800x480
+##display for 7.5 inch R/B/W 3 color eink to display better quality, need to use my convert script to convert picture to 3 colors 800x480 or 880x528
 ##
 ##
 from PIL import Image
@@ -9,9 +9,14 @@ import os
 import random
 from waveshare_epd import epd7in5b_V2
 import numpy
+#from waveshare_epd import epd7in5b_HD  #unquote this line if you are using higher version 7in5b_HD
 
 EPD_WIDTH = 800
 EPD_HEIGHT = 480
+
+#unquote the below 2 lines if you are using higher version 7in5b_HD
+#EPD_WIDTH = 880
+#EPD_HEIGHT = 528
 
 #def choose_random_loading_image(path):
 #    images=os.listdir(path)
@@ -22,6 +27,7 @@ picdir = '/home/pi/your_directory/bmp/'
 
 def main():
     epd = epd7in5b_V2.EPD()
+#    epd = epd7in5b_HD.EPD() #for 7in5B_HD with 880x528
     epd.init()
     imageB1 = Image.new('1', (EPD_WIDTH, EPD_HEIGHT), 255)    # 1: clear the frame
 #    ImageDraw.Draw(imageB)
