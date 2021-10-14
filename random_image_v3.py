@@ -65,10 +65,9 @@ def main():
 #    imageB1.show()
 #    imageR1.show()
     epd.display(epd.getbuffer(imageB1), epd.getbuffer(imageR1))
-#    time.sleep(3600)  # change the image every hour
+#    time.sleep(3600)  # change the image every hour ,I quote this line as added the script in crontab
     exit()
     main()
-
 
 if __name__ == '__main__':
     main()
