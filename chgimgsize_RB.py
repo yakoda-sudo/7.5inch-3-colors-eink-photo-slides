@@ -4,7 +4,7 @@ from PIL import *
 #import time
 import os
 import numpy
-#define image size
+#define image size 800x480 is for 7in5b_V2 and if your need to convert for 7in5b_HD change to 880x528
 width = 800
 height = 480
 #define palette array 3 colors ,black/white/red
