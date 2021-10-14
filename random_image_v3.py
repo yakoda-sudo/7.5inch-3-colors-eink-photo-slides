@@ -36,7 +36,7 @@ def main():
     pixelR = imageR1.load()
     for i in range(imageB1.size[0]):
         for j in range(imageB1.size[1]):
-            if pixelB[i, j] != (0, 0, 0):
+            if pixelB[i, j] == (255, 0, 0):
                 imageB1.putpixel((i, j), (255, 255, 255))
             else:
                 pass
@@ -54,7 +54,7 @@ def main():
 #    else:
 #        pass
 #    resized_img = image.resize((EPD_WIDTH, EPD_HEIGHT))
-    imageB1 = imageB1.convert('1')
+    imageB1 = imageB1.convert('1', dither=Image.FLOYDSTEINBERG)
     imageR1 = imageR1.convert('1')
 #    imageB1.show()
 #    imageR1.show()
