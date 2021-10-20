@@ -24,6 +24,7 @@ for item in filelist:
 #    if item.endswith('.jpg'):
     if os.path.isfile(path1+item):
 # Image.open() can also open other image types
+        filename = os.path.splitext(item)[0]
         img = Image.open(path1+item)
         h, w = img.size
 # rotate the vertical image
@@ -37,7 +38,7 @@ for item in filelist:
 #        f, e = os.path.splitext(path2+item)
 #        newimage.new('RGB', (width, height), "white")
 #        newimgR.save(path2 + item + '-R.bmp')
-        colored_img.save(path2 + item + '.bmp')
+        colored_img.save(path2 + filename + '.bmp')
         img.close()
         resized_img.close()
         colored_img.close()
